@@ -1,0 +1,11 @@
+CLS
+SCREEN _NEWIMAGE(640, 480, 32)
+
+Image = _LOADIMAGE("079.jpg")
+_PUTIMAGE (0,0)-(_WIDTH - 1, _HEIGHT - 1), Image
+
+SLEEP 1
+
+h& = _SNDOPEN("079.wav")
+IF h& = 0 THEN BEEP ELSE _SNDPLAY h&
+
